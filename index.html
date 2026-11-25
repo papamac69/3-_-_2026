@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>2026년 모션그래픽2 · 3면 몰입형 미디어아트 주차별 작품</title>
+<style>
+:root{--bg:#0b0d12;--panel:#12151d;--line:#232838;--text:#e8ebf3;--dim:#8a93a8;--accent:#8fa8ff;--on:#1c2234}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+body{display:grid;grid-template-columns:268px minmax(0,1fr);height:100vh;overflow:hidden}
+body.wide{grid-template-columns:0 minmax(0,1fr)}
+body.wide #side{visibility:hidden}
+button{font:inherit;color:inherit;background:#1a1f2c;border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
+button:hover{border-color:#3a4360}
+/* 왼쪽 목록 */
+#side{border-right:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+#brand{padding:18px 16px 12px}
+#brand h1{font-size:17px;margin:0;font-weight:800;letter-spacing:-.4px}
+#brand h2{font-size:12.5px;margin:3px 0 0;font-weight:500;color:#c5cbe0;letter-spacing:-.2px}
+#brand p{margin:6px 0 0;font-size:11px;color:#5d6580}
+.lab{padding:6px 16px 4px;font-size:11px;color:var(--dim)}
+#weeks,#classes{display:flex;gap:6px;padding:0 16px 8px;overflow-x:auto}
+#weeks button{white-space:nowrap;font-size:12.5px;border-radius:999px;padding:5px 12px}
+#weeks button.on{background:var(--accent);color:#0b0d12;border-color:var(--accent);font-weight:700}
+#classes{gap:0;padding-bottom:10px}
+#classes button{flex:1;border-radius:0;font-size:13px;padding:7px 6px;white-space:nowrap}
+#classes button:first-child{border-radius:8px 0 0 8px}
+#classes button:last-child{border-radius:0 8px 8px 0}
+#classes button+button{border-left:none}
+#classes button.on{background:var(--on);color:#fff;font-weight:700;box-shadow:inset 0 -2px 0 var(--accent)}
+#classes small{color:var(--dim);font-weight:400;margin-left:3px}
+#list{flex:1;overflow:auto;padding:0 8px 16px;margin:0;list-style:none;border-top:1px solid var(--line);padding-top:8px}
+#list li button{display:flex;width:100%;text-align:left;gap:10px;align-items:baseline;border:none;background:none;border-radius:8px;padding:9px 10px}
+#list li button:hover{background:#181c28}
+#list li button.on{background:var(--on);box-shadow:inset 3px 0 0 var(--accent)}
+#list .nm{font-weight:700;font-size:14px;min-width:44px}
+#list .tt{font-size:12px;color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+#list .du{font-size:11px;color:#5d6580;font-variant-numeric:tabular-nums}
+/* 오른쪽 재생 */
+#stage{display:flex;flex-direction:column;min-width:0;min-height:0}
+#bar{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);min-height:54px}
+#bar .who{font-size:17px;font-weight:800;letter-spacing:-.3px}
+#bar .what{font-size:13px;color:var(--dim)}
+#bar .sp{flex:1}
+#bar .meta{font-size:11.5px;color:var(--dim);margin-right:4px}
+#bar button.on{background:var(--accent);color:#0b0d12;border-color:var(--accent)}
+#view{position:relative;flex:1;min-height:0;background:var(--bg)}
+#view iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--bg);visibility:hidden}
+#view iframe.ready{visibility:visible}
+#msg{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--dim);font-size:14px;line-height:1.7;padding:20px}
+#msg b{color:var(--text);font-size:18px}
+#fsHint{position:absolute;top:10px;right:14px;font-size:12px;color:#aab3c9;background:rgba(10,12,18,.7);padding:5px 10px;border-radius:6px;pointer-events:none;opacity:0;transition:opacity .4s}
+#view:fullscreen #fsHint.show{opacity:1}
+.spin{width:28px;height:28px;border:3px solid #2a3046;border-top-color:var(--accent);border-radius:50%;animation:r 1s linear infinite;margin:0 auto 12px}
+@keyframes r{to{transform:rotate(360deg)}}
+#menuBtn{display:none}
+@media (max-width:820px){
+  body,body.wide{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  #side{position:fixed;inset:0 25% 0 0;z-index:20;transform:translateX(-102%);transition:transform .2s;box-shadow:10px 0 40px rgba(0,0,0,.5);visibility:visible!important}
+  body.menu #side{transform:none}
+  #menuBtn{display:inline-block}
+  #bar .meta,#wideBtn{display:none}
+}
+</style>
+</head>
+<body>
+<aside id="side">
+  <div id="brand"><h1 id="ttl">2026년 모션그래픽2</h1><h2 id="sub">3면 몰입형 미디어아트 주차별 작품</h2><p id="upd"></p></div>
+  <div class="lab">주차</div>
+  <div id="weeks"></div>
+  <div class="lab">분반</div>
+  <div id="classes"></div>
+  <ul id="list"></ul>
+</aside>
+<section id="stage">
+  <div id="bar">
+    <button id="menuBtn">☰ 목록</button>
+    <span class="who" id="who">작품을 골라 주세요</span><span class="what" id="what"></span>
+    <span class="sp"></span>
+    <span class="meta" id="meta"></span>
+    <button id="prevBtn" title="이전 학생 (↑)">◀</button><button id="nextBtn" title="다음 학생 (↓)">▶</button>
+    <button id="wideBtn" title="목록을 접고 크게 보기 (W)">⇔ 크게</button>
+    <button id="fsBtn" title="전체화면 (F) · 나가기 Esc">⛶ 전체화면</button>
+    <button id="openBtn" title="새 탭에서 3면 스튜디오로 열어 타임라인·씬 목록·씬 코드를 봅니다">제작 과정 보기 ↗</button>
+  </div>
+  <div id="view"><div id="msg"><div><b>왼쪽에서 학생 이름을 누르세요</b><br>PC 크롬에서 보는 것을 권장합니다.</div></div><div id="fsHint">Esc 나가기 · ↑↓ 다른 학생 · Space 재생/정지</div></div>
+</section>
+<script>
+const $ = id => document.getElementById(id);
+let M = null, week = null, cls = null, cur = null, frame = null, loadToken = 0;
+
+// 학생 HTML(3면 스튜디오)을 '보기 전용'으로 바꾸는 스타일
+//  보통: 3면 공간 뷰 + 파노라마 + 재생바 / 크게·전체화면(body.vac-big): 3면 공간 뷰 + 재생바만, 화면 가득
+const VIEW_CSS = `
+header, aside, #bars, #toast { display:none !important; }
+html, body { background:#0b0d12 !important; }
+main { display:block !important; padding:12px 16px 24px !important; margin:0 auto !important;
+       max-width:min(100%, calc((100vh - 250px) / 0.55)) !important; }
+section > .card { display:none !important; }
+section > .card:has(#wallView), section > .card:has(#pano) { display:block !important; }
+.card { margin-bottom:10px !important; }
+.card:has(#pano) .legend { display:none !important; }
+body.vac-big { overflow:hidden !important; }
+body.vac-big main { padding:8px 12px 0 !important; max-width:min(100%, calc((100vh - 70px) * 2)) !important; }
+body.vac-big .card { background:none !important; border:0 !important; padding:0 !important; margin:0 !important; }
+body.vac-big .card h2, body.vac-big .card:has(#wallView) > .row, body.vac-big #nowLbl,
+body.vac-big section > .card:has(#pano) { display:none !important; }
+body.vac-big .transport { margin-top:6px !important; opacity:.35; transition:opacity .3s; }
+body.vac-big .transport:hover { opacity:1; }
+`;
+
+function fmtDur(s) { s = Math.round(s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+function fmtMB(b) { return (b / 1048576).toFixed(b > 10485760 ? 0 : 1) + 'MB'; }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function W() { return M.weeks.find(x => x.id === week); }
+function C() { const w = W(); return w && (w.classes.find(c => c.id === cls) || w.classes[0]); }
+function works() { const c = C(); return c ? c.works : []; }
+function big() { return document.fullscreenElement === $('view') || document.body.classList.contains('wide'); }
+
+function renderSide() {
+  $('weeks').innerHTML = M.weeks.map(w => `<button data-w="${esc(w.id)}" class="${w.id === week ? 'on' : ''}">${esc(w.label)}</button>`).join('');
+  $('classes').innerHTML = W().classes.map(c => `<button data-c="${esc(c.id)}" class="${c.id === cls ? 'on' : ''}">${esc(c.id)}<small>${c.works.length}명</small></button>`).join('');
+  $('list').innerHTML = works().map(w => `<li><button data-f="${esc(w.file)}" class="${cur && cur.file === w.file ? 'on' : ''}">
+    <span class="nm">${esc(w.name)}</span><span class="tt">${esc(w.title || '')}</span><span class="du">${fmtDur(w.dur)}</span></button></li>`).join('');
+}
+function setHash() {
+  const p = new URLSearchParams(); p.set('w', week); p.set('c', cls); if (cur) p.set('n', cur.name);
+  history.replaceState(null, '', '#' + p.toString());
+}
+function resetStage() {
+  cur = null; $('who').textContent = '작품을 골라 주세요'; $('what').textContent = ''; $('meta').textContent = '';
+  clearView('<b>왼쪽에서 학생 이름을 누르세요</b><br>' + esc(W().label) + ' · ' + esc(cls) + ' ' + works().length + '명');
+}
+function selectWeek(id) {
+  week = id; const w = W();
+  if (!w.classes.some(c => c.id === cls)) cls = w.classes[0].id;
+  resetStage(); renderSide(); setHash();
+}
+function selectClass(id) { cls = id; resetStage(); renderSide(); setHash(); }
+function clearView(html) {
+  if (frame) { frame.remove(); frame = null; }
+  $('msg').hidden = false; $('msg').innerHTML = '<div>' + html + '</div>';
+}
+
+// 보기 크기(보통 / 크게)를 학생 작품 화면에 적용
+function applySize() {
+  const on = big();
+  $('wideBtn').classList.toggle('on', document.body.classList.contains('wide'));
+  try {
+    const d = frame && frame.contentDocument;
+    if (d && d.body) { d.body.classList.toggle('vac-big', on); frame.contentWindow.dispatchEvent(new Event('resize')); }
+  } catch (e) {}
+}
+function toggleFS() {
+  const v = $('view');
+  if (document.fullscreenElement) document.exitFullscreen();
+  else if (v.requestFullscreen) v.requestFullscreen();
+}
+function toggleWide() { document.body.classList.toggle('wide'); setTimeout(applySize, 30); }
+document.addEventListener('fullscreenchange', () => {
+  setTimeout(applySize, 60);
+  const h = $('fsHint'); h.classList.add('show'); clearTimeout(h._t); h._t = setTimeout(() => h.classList.remove('show'), 2500);
+});
+
+function onKey(e) {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key;
+  if (k === 'ArrowDown') { e.preventDefault(); step(1); }
+  else if (k === 'ArrowUp') { e.preventDefault(); step(-1); }
+  else if (k === 'f' || k === 'F' || k === 'ㄹ') { e.preventDefault(); toggleFS(); }
+  else if (k === 'w' || k === 'W' || k === 'ㅈ') { e.preventDefault(); toggleWide(); }
+  else if (k === ' ') {
+    try { const b = frame && frame.contentDocument.getElementById('playBtn'); if (b) { e.preventDefault(); b.click(); } } catch (err) {}
+  }
+}
+
+function openWork(w) {
+  cur = w; renderSide(); setHash();
+  document.body.classList.remove('menu');
+  $('who').textContent = w.name;
+  $('what').textContent = w.title ? '「' + w.title + '」' : '';
+  $('meta').textContent = '씬 ' + w.scenes + '개 · ' + fmtDur(w.dur) + (w.audio ? ' · ♪' : '');
+  const src = (M.base == null ? 'weeks/' : M.base) + encodeURIComponent(week) + '/' + w.file.split('/').map(encodeURIComponent).join('/');
+  $('openBtn').onclick = () => window.open(src, '_blank');
+  if (w.error) { clearView('<b>이 파일은 재생할 수 없습니다</b><br>' + esc(w.error)); return; }
+  clearView('<div class="spin"></div><b>' + esc(w.name) + '</b> 작품 불러오는 중<br>' + fmtMB(w.size));
+  const token = ++loadToken;
+  frame = document.createElement('iframe');   // 이전 작품은 iframe째 지움 (메모리·GPU 정리)
+  frame.setAttribute('allow', 'autoplay; fullscreen');
+  frame.src = src;
+  $('view').insertBefore(frame, $('fsHint'));
+  const f = frame, t0 = performance.now();
+  (function waitDoc() {
+    if (token !== loadToken) return;
+    let d = null; try { d = f.contentDocument; } catch (e) {}
+    if (!d) { clearView('<b>작품을 열 수 없습니다</b><br>뷰어와 같은 사이트에 있는 파일만 볼 수 있습니다.'); return; }
+    if (d.readyState === 'loading' || !d.head || !d.body || d.URL === 'about:blank') return setTimeout(waitDoc, 40);
+    if (!d.getElementById('vac-view-css')) {
+      const st = d.createElement('style'); st.id = 'vac-view-css'; st.textContent = VIEW_CSS; d.head.appendChild(st);
+      d.addEventListener('keydown', onKey);
+    }
+    d.body.classList.toggle('vac-big', big());
+    (function waitEngine() {
+      if (token !== loadToken) return;
+      const S = f.contentWindow && f.contentWindow.__studio;
+      let ok = false; try { ok = !!S && S.project.timeline.length > 0 && S.workLayout().total > 0.15; } catch (e) {}
+      if (!ok && performance.now() - t0 < 60000) return setTimeout(waitEngine, 100);
+      try { f.contentWindow.dispatchEvent(new Event('resize')); } catch (e) {}
+      setTimeout(() => {
+        if (token !== loadToken) return;
+        f.classList.add('ready'); $('msg').hidden = true;
+        try { f.contentWindow.focus(); } catch (e) {}
+      }, 150);
+    })();
+  })();
+}
+
+function step(k) {
+  const ws = works(); if (!ws.length) return;
+  let i = cur ? ws.findIndex(w => w.file === cur.file) : -1;
+  i = (i + k + ws.length) % ws.length; openWork(ws[i]);
+}
+
+$('weeks').onclick = e => { const b = e.target.closest('button'); if (b) selectWeek(b.dataset.w); };
+$('classes').onclick = e => { const b = e.target.closest('button'); if (b) selectClass(b.dataset.c); };
+$('list').onclick = e => { const b = e.target.closest('button'); if (b) openWork(works().find(w => w.file === b.dataset.f)); };
+$('prevBtn').onclick = () => step(-1);
+$('nextBtn').onclick = () => step(1);
+$('menuBtn').onclick = () => document.body.classList.toggle('menu');
+$('fsBtn').onclick = toggleFS;
+$('wideBtn').onclick = toggleWide;
+document.addEventListener('keydown', onKey);
+
+(async function init() {
+  try { M = await (await fetch('manifest.json', { cache: 'no-cache' })).json(); }
+  catch (e) { clearView(location.protocol === 'file:' ? '<b>파일을 직접 열면 작품이 보이지 않습니다</b><br>같은 폴더의 <b>뷰어_미리보기.bat</b>을 실행하세요.' : '<b>작품 목록(manifest.json)을 불러오지 못했습니다</b>'); return; }
+  if (M.title) { $('ttl').textContent = M.title; }
+  if (M.subtitle) { $('sub').textContent = M.subtitle; }
+  $('upd').textContent = '최근 업데이트 ' + M.updated;
+  if (!M.weeks.length) { clearView('<b>아직 올라온 작품이 없습니다</b>'); return; }
+  const p = new URLSearchParams(location.hash.slice(1));
+  const w = M.weeks.find(x => x.id === p.get('w')) || M.weeks[0];
+  cls = p.get('c'); selectWeek(w.id);
+  const s = p.get('n') && works().find(x => x.name === p.get('n'));
+  if (s) openWork(s);
+})();
+</script>
+</body>
+</html>

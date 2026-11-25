@@ -1,0 +1,324 @@
+{
+ "title": "2026년 모션그래픽2",
+ "subtitle": "3면 몰입형 미디어아트 주차별 작품",
+ "base": "",
+ "updated": "2026-11-25 17:57",
+ "weeks": [
+  {
+   "id": "2026.11.23",
+   "label": "11월 23일",
+   "classes": [
+    {
+     "id": "오전반",
+     "works": [
+      {
+       "name": "김경난",
+       "title": "시선잠식",
+       "file": "오전반/김경난_시선잠식.html",
+       "size": 8597242,
+       "ver": "v3.4",
+       "scenes": 8,
+       "dur": 50.8,
+       "audio": true
+      },
+      {
+       "name": "김도현",
+       "title": "형태가 사라진 자리에서",
+       "file": "오전반/김도현_형태가_사라진_자리에서.html",
+       "size": 5101614,
+       "ver": "v3.4",
+       "scenes": 8,
+       "dur": 120.0,
+       "audio": true
+      },
+      {
+       "name": "김민욱",
+       "title": "연주회",
+       "file": "오전반/김민욱_연주회.html",
+       "size": 2396017,
+       "ver": "v3.4",
+       "scenes": 9,
+       "dur": 58.3,
+       "audio": true
+      },
+      {
+       "name": "김효원",
+       "title": "With",
+       "file": "오전반/김효원.html",
+       "size": 2847113,
+       "ver": "v3.4",
+       "scenes": 8,
+       "dur": 76.3,
+       "audio": true
+      },
+      {
+       "name": "문지윤",
+       "title": "LAST SIGNAL",
+       "file": "오전반/문지윤_LAST_SIGNAL.html",
+       "size": 24254283,
+       "ver": "v3.4",
+       "scenes": 11,
+       "dur": 93.6,
+       "audio": true
+      },
+      {
+       "name": "민예원",
+       "title": "시간",
+       "file": "오전반/민예원_시간.html",
+       "size": 4178539,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 35.5,
+       "audio": true
+      },
+      {
+       "name": "서원미",
+       "title": "",
+       "file": "오전반/서원미.html",
+       "size": 11464781,
+       "ver": "v3.4",
+       "scenes": 8,
+       "dur": 75.6,
+       "audio": true
+      },
+      {
+       "name": "양세은",
+       "title": "okusuri",
+       "file": "오전반/양세은_okusuri.html",
+       "size": 6577813,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 34.5,
+       "audio": true
+      },
+      {
+       "name": "이규안",
+       "title": "THE HIDDEN ANGEL",
+       "file": "오전반/이규안_THE_HIDDEN_ANGEL_3면스튜디오_v3.html",
+       "size": 6327356,
+       "ver": "v3",
+       "scenes": 1,
+       "dur": 9.0,
+       "audio": true
+      },
+      {
+       "name": "이다진",
+       "title": "빛의 행렬",
+       "file": "오전반/이다진_20250214_빛의_행렬.html",
+       "size": 9286691,
+       "ver": "v3.4",
+       "scenes": 10,
+       "dur": 69.5,
+       "audio": true
+      },
+      {
+       "name": "이수빈",
+       "title": "출구 없는 전시실",
+       "file": "오전반/이수빈_출구_없는_전시실.html",
+       "size": 331389,
+       "ver": "v3.4",
+       "scenes": 1,
+       "dur": 10.0,
+       "audio": false
+      },
+      {
+       "name": "이연정",
+       "title": "HIGH FOREVER",
+       "file": "오전반/이연정_HIGH_FOREVER.html",
+       "size": 25222261,
+       "ver": "v3.4",
+       "scenes": 18,
+       "dur": 60.0,
+       "audio": true
+      },
+      {
+       "name": "이영경",
+       "title": "PINK VENOM",
+       "file": "오전반/이영경_PINK_VENOM.html",
+       "size": 3610477,
+       "ver": "v3.4",
+       "scenes": 10,
+       "dur": 46.5,
+       "audio": true
+      },
+      {
+       "name": "이태빈",
+       "title": "",
+       "file": "오전반/이태빈.html",
+       "size": 5256939,
+       "ver": "v3.4",
+       "scenes": 6,
+       "dur": 58.0,
+       "audio": true
+      },
+      {
+       "name": "이태현",
+       "title": "HUMANITY",
+       "file": "오전반/이태현_HUMANITY.html",
+       "size": 37725145,
+       "ver": "v3",
+       "scenes": 9,
+       "dur": 107.3,
+       "audio": true
+      },
+      {
+       "name": "전하진",
+       "title": "스케일 여정",
+       "file": "오전반/전하진.html",
+       "size": 3045824,
+       "ver": "v3",
+       "scenes": 4,
+       "dur": 52.0,
+       "audio": true
+      },
+      {
+       "name": "최자인",
+       "title": "할로윈의 밤",
+       "file": "오전반/최자인_할로윈의_밤_v2.html",
+       "size": 3341373,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 35.5,
+       "audio": true
+      }
+     ]
+    },
+    {
+     "id": "오후반",
+     "works": [
+      {
+       "name": "권민경",
+       "title": "CANDY AND ANDY",
+       "file": "오후반/권민경_CANDY AND ANDY.html",
+       "size": 6815951,
+       "ver": "v3.4",
+       "scenes": 5,
+       "dur": 53.5,
+       "audio": true
+      },
+      {
+       "name": "김가빈",
+       "title": "오락실",
+       "file": "오후반/김가빈_오락실.html",
+       "size": 298220,
+       "ver": "v3.4",
+       "scenes": 1,
+       "dur": 13.0,
+       "audio": false
+      },
+      {
+       "name": "김민표",
+       "title": "LOVE YA!",
+       "file": "오후반/김민표_LOVE_YA!.html",
+       "size": 8367024,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 39.5,
+       "audio": true
+      },
+      {
+       "name": "김보민",
+       "title": "화중풍류",
+       "file": "오후반/김보민_화중풍류.html",
+       "size": 6709011,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 54.0,
+       "audio": true
+      },
+      {
+       "name": "박지예",
+       "title": "KOLOK COLOK",
+       "file": "오후반/박지예_KOLOK_COLOK.html",
+       "size": 2623653,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 46.4,
+       "audio": true
+      },
+      {
+       "name": "박현빈",
+       "title": "world.execute(me);",
+       "file": "오후반/박현빈_world.execute(me);_v13.html",
+       "size": 7886584,
+       "ver": "v3.4",
+       "scenes": 6,
+       "dur": 88.8,
+       "audio": true
+      },
+      {
+       "name": "백채민",
+       "title": "한입의 여행 한국",
+       "file": "오후반/백채민_한입의_여행_한국.html",
+       "size": 398670,
+       "ver": "v3.4",
+       "scenes": 5,
+       "dur": 39.6,
+       "audio": false
+      },
+      {
+       "name": "서민솔",
+       "title": "만화",
+       "file": "오후반/서민솔_만화.html",
+       "size": 28452077,
+       "ver": "v3.5",
+       "scenes": 3,
+       "dur": 47.5,
+       "audio": true
+      },
+      {
+       "name": "성도원",
+       "title": "KATAMARI",
+       "file": "오후반/성도원_KATAMARI_v2.html",
+       "size": 3724939,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 113.2,
+       "audio": true
+      },
+      {
+       "name": "송은서",
+       "title": "고흐가 바라본 세상에 대하여",
+       "file": "오후반/송은서_고흐가 바라본 세상에 대하여 1120.html",
+       "size": 4329518,
+       "ver": "v3",
+       "scenes": 8,
+       "dur": 94.0,
+       "audio": true
+      },
+      {
+       "name": "아나스타시아",
+       "title": "MusicVideo",
+       "file": "오후반/아나스타시아_MusicVideo_3면스튜디오_v3 (3).html",
+       "size": 5241444,
+       "ver": "v3.2",
+       "scenes": 20,
+       "dur": 54.7,
+       "audio": true
+      },
+      {
+       "name": "이혁준",
+       "title": "최종화",
+       "file": "오후반/이혁준_최종화.html",
+       "size": 8419425,
+       "ver": "v3.4",
+       "scenes": 1,
+       "dur": 9.0,
+       "audio": true
+      },
+      {
+       "name": "최정원",
+       "title": "STAR WALKIN",
+       "file": "오후반/최정원_STAR_WALKIN_합본.html",
+       "size": 7188069,
+       "ver": "v3.4",
+       "scenes": 3,
+       "dur": 40.5,
+       "audio": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
